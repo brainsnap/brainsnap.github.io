@@ -1,0 +1,52 @@
+h1 {
+  margin: 0;
+}
+
+main {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.page-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+a.disabled-link {
+  display: inline-block;
+  padding: 5px;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+a.disabled-link:hover {
+  text-decoration: none;
+}
+
+a.disabled-link.enabled {
+  opacity: 1;
+  pointer-events: auto;
+}

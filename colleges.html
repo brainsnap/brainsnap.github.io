@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="colleges.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>BrainSnap</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="Logo-removebg-preview.png" alt="" class="logo"/>
+      <ol class="menu-bar">
+        <li class="menu-li">
+          <a class="menu-link" href="/index.html">Home</a>
+        </li>
+        <li class="menu-li"><a class="menu-link">About</a></li>
+        <li class="menu-li">
+          <a class="menu-link">Services</a>
+          <ol class="drop">
+            <li class="menu-li">
+              <a class="menu-sublink" href="#" target="_self">Colleges</a>
+            </li>
+            <li class="menu-li">
+              <a class="menu-sublink" href="#">Subjects</a>
+            </li>
+          </ol>
+        </li>
+        <li class="menu-li">
+          <a class="menu-link">Contact</a>
+          <ol class="drop">
+            <li class="menu-li">
+              <a class="menu-sublink" href="tel:7015377087">Call Us</a>
+            </li>
+            <li class="menu-li">
+              <a
+                class="menu-sublink"
+                href="mailto:rudraksh746.be22@chitkara.edu.in"
+                >Mail Us</a
+              >
+            </li>
+          </ol>
+        </li>
+        <li class="menu-li">
+          <a
+            class="menu-link"
+            href="https://goo.gl/maps/9d9a2xJMqU9moFhK6"
+            target="_blank"
+            >Find Us</a
+          >
+        </li>
+      </ol>
+    </header>
+    <section class="section sec1">
+      <h2 class="colleges-heading">Our<br>Colleges</h2>
+      <p class="colleges-paragraph">"Easy Access to top notch study mterial from our partnered Colleges"</p>
+    </section>
+    <section class="section sec2">  
+      <div class="search-bar">
+        <label>
+          <input type="text" id="search-input" required />
+          <ul>
+            <li s>s</li>
+            <li e>e</li>
+            <li a>a</li>
+            <li r>r</li>
+            <li c>c</li>
+            <li h>h</li>
+          </ul>
+        </label>
+      </div>
+    </section>
+    <section class="section sec3">
+      <h1 class="list-heading">Select Your College</h1>
+      <ul id="college-list">
+        <li>
+          <img
+            src="https://chitkara-bot.itmatic.io/public/frontend/images/cu-fevicon.png"
+            alt="College A Logo"
+            class="college-logo"
+          />
+          <a href="/chitkara.html">Chitkara University</a>
+        </li>
+        <li>
+          <img
+            src="https://www.cuchd.in/add_to_homescreen/android-icon-192x192.png"
+            alt="College B Logo"
+            class="college-logo"
+          />
+          <a href="college_b.html">Chandigarh University</a>
+        </li>
+        <li>
+          <img
+            src="https://pec.ac.in/sites/default/files/favicon-1.png"
+            alt="College C Logo"
+            class="college-logo"
+          />
+          <a href="college_c.html">Punjab Engineering College</a>
+        </li>
+        <li>
+          <img
+            src="http://dtu.ac.in/Web/images/aicte.jpg"
+            alt="College D Logo"
+            class="college-logo"
+          />
+          <a href="college_d.html">Delhi Technical University</a>
+        </li>
+        <!-- Add more college names and logos here -->
+      </ul>
+
+      <p id="search-error" class="error-message" style="display: none">
+        No search results found.
+      </p>
+    </section>
+    <footer>
+      <div class="footer-text">© 2023 BrainSnap. All rights reserved.</div>
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <ul class="social-icons">
+        <li>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </li>
+      </ul>
+      <div class="footer-text">Follow us on social media for updates</div>
+    </footer>
+    <script src="main.js"></script>
+    <script src="colleges.js"></script>
+  </body>
+</html>
