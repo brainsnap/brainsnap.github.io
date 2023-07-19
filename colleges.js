@@ -1,9 +1,9 @@
-window.addEventListener('DOMContentLoaded', function() {
-  var collegeList = document.getElementById('college-list');
-  var colleges = collegeList.getElementsByTagName('li');
+window.addEventListener("DOMContentLoaded", function () {
+  var collegeList = document.getElementById("college-list");
+  var colleges = collegeList.getElementsByTagName("li");
   var collegesArray = Array.from(colleges);
 
-  collegesArray.sort(function(a, b) {
+  collegesArray.sort(function (a, b) {
     var collegeA = a.textContent.toUpperCase();
     var collegeB = b.textContent.toUpperCase();
 
@@ -16,30 +16,34 @@ window.addEventListener('DOMContentLoaded', function() {
     return 0;
   });
 
-  collegesArray.forEach(function(college) {
+  collegesArray.forEach(function (college) {
     collegeList.appendChild(college);
   });
 
-  document.getElementById('search-input').addEventListener('input', function() {
-    var searchInput = this.value.toLowerCase().trim();
+  document
+    .getElementById("search-input")
+    .addEventListener("input", function () {
+      var searchInput = this.value.toLowerCase().trim();
 
-    var searchError = document.getElementById('search-error');
-    searchError.style.display = 'none';
+      var searchError = document.getElementById("search-error");
+      searchError.style.display = "none";
 
-    Array.from(colleges).forEach(function(college) {
-      var collegeName = college.querySelector('a').textContent.toLowerCase();
+      Array.from(colleges).forEach(function (college) {
+        var collegeName = college.querySelector("a").textContent.toLowerCase();
 
-      if (collegeName.includes(searchInput)) {
-        college.style.display = 'flex';
-      } else {
-        college.style.display = 'none';
+        if (collegeName.includes(searchInput)) {
+          college.style.display = "flex";
+        } else {
+          college.style.display = "none";
+        }
+      });
+
+      if (
+        !collegesArray.some(function (college) {
+          return college.style.display !== "none";
+        })
+      ) {
+        searchError.style.display = "block";
       }
     });
-
-    if (!collegesArray.some(function(college) {
-      return college.style.display !== 'none';
-    })) {
-      searchError.style.display = 'block';
-    }
-  });
 });
