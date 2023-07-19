@@ -18,7 +18,10 @@
   </head>
   <body>
     <header class="header">
-      <img src="Logo.png" alt="" class="logo"/>
+      <img src="Logo.png" alt="" class="logo" />
+      <div class="hamburger-icon">
+        <i class="fa-solid fa-bars hamburger"></i>
+      </div>
       <ol class="menu-bar">
         <li class="menu-li">
           <a class="menu-link" href="/index.html">Home</a>
@@ -61,10 +64,12 @@
       </ol>
     </header>
     <section class="section sec1">
-      <h2 class="colleges-heading">Our<br>Colleges</h2>
-      <p class="colleges-paragraph">"Easy Access to top notch study mterial from our partnered Colleges"</p>
+      <h2 class="colleges-heading">Our<br />Colleges</h2>
+      <p class="colleges-paragraph">
+        "Easy Access to top notch study mterial from our partnered Colleges"
+      </p>
     </section>
-    <section class="section sec2">  
+    <section class="section sec2">
       <div class="search-bar">
         <label>
           <input type="text" id="search-input" required />
@@ -107,11 +112,7 @@
           <a href="college_c.html">Punjab Engineering College</a>
         </li>
         <li>
-          <img
-            src="DTUlogo.png"
-            alt="College D Logo"
-            class="college-logo"
-          />
+          <img src="DTUlogo.png" alt="College D Logo" class="college-logo" />
           <a href="college_d.html">Delhi Technical University</a>
         </li>
         <!-- Add more college names and logos here -->
@@ -145,7 +146,27 @@
       </ul>
       <div class="footer-text">Follow us on social media for updates</div>
     </footer>
-    <script src="main.js"></script>
     <script src="colleges.js"></script>
+    <script>
+      // JavaScript for the hamburger menu
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburgerIcon = document.querySelector(".hamburger-icon");
+        const menuBar = document.querySelector(".menu-bar");
+
+        hamburgerIcon.addEventListener("click", function () {
+          menuBar.classList.toggle("open"); // Toggle the 'open' class to show/hide the menu bar
+        });
+        // Close the menu when clicking outside the menu bar
+        document.addEventListener("click", function (event) {
+          const targetElement = event.target;
+          if (
+            !menuBar.contains(targetElement) &&
+            !hamburgerIcon.contains(targetElement)
+          ) {
+            menuBar.classList.remove("open");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
